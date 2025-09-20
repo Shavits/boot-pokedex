@@ -1,0 +1,13 @@
+*.exe
+*.dll
+*.obj
+*.pdb
+*.idb
+*.ilk
+*.log
+*.suo
+*.user
+*.tlog
+*.lastbuildstate
+*.cache
+*.vs
