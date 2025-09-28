@@ -1,12 +1,16 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"math/rand"
 )
 
 func commandCatch(cfg *config, param string) error {
-
+	if param == ""{
+		return errors.New("you must provide a pokemon name")
+	}
+	
 	pokemonResp, err := cfg.pokeapiClient.GetPokemonData(param)
 	if err != nil {
 		return err

@@ -1,11 +1,15 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 )
 
 func commandExplore(cfg *config, param string) error {
 
+	if param == ""{
+		return errors.New("you must provide a location name")
+	}
 	locationsResp, err := cfg.pokeapiClient.GetLocationData(param)
 	if err != nil {
 		return err
